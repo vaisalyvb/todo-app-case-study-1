@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: teal;
+}
+
+.login { 
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin: -150px 0 0 -150px;
+  width:300px;
+  height:300px;
+}
+.login h1 { color:white;  letter-spacing:1px; text-align:center; }
+
+input { 
+  width: 100%; 
+  margin-bottom: 10px; 
+  
+  padding: 10px;
+  font-size: 13px;
+  
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 4px;
+  
+}
+
+
+.btn-large {
+    padding: 9px 14px; 
+    font-size: 15px; 
+    border-radius: 5px;
+    }
+
+.btn:hover { 
+    background-position: 0 -15px; 
+    }
+
+.btn-primary, .btn-primary:hover {
+   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); 
+   color: #ffffff; 
+   }
+
+.btn-primary.active { 
+   color: rgba(255, 255, 255, 0.75); 
+   }
+
+.btn-primary { 
+   background-color: #4a77d4; 
+   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4)); 
+   background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4); 
+   background-repeat: repeat-x; 
+   filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, endColorstr=#4a77d4, GradientType=0);  
+   border: 1px solid #3762bc; 
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.4); 
+    }
+
+
+.btn-block { width: 100%; display:block; }
+
+
+
+
