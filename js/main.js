@@ -23,12 +23,7 @@ function ajax(){
                     checked++;
                 }
             }
-            if(checked==5){
-                resolve("Congrats.5 Tasks have been Successfully Completed ");
-            }
-            else{
-            reject("Select atleast 5 tasks");
-        }
+           
         });
         promise.then (function(s){
             alert(s);
