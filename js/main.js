@@ -25,10 +25,4 @@ function ajax(){
             }
            
         });
-        promise.then (function(s){
-            alert(s);
-        })
-        .catch(function(e){
-            alert(e);
-    })
-}
+    }
