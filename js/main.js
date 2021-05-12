@@ -3,26 +3,35 @@ function ajax(){
         xhttp.onreadystatechange = function(){
             if(this.readyState==4&&this.status==200){
                 var response = JSON.parse(this.responseText);
-                var output ="";
-                
+                var checkboxes;
+                var output="";
+                var table="";
                 for(var i=0;i<response.length;i++){
-                    output += "<input type = 'checkbox'  >"+ response[i].title +"<br>";
+                    if(response[i].completed==true){
+                        output +="<br>"+'<input type="checkbox" class="check" checked disabled>'+(response[i].title)+"<br>";
+                      }
+                      else{
+                       output +="<br>"+'<input type="checkbox" class="checks">'+(response[i].title)+"<br>";
+                       
                 }
                 document.getElementById("demo").innerHTML=output;
-            }
+            };
         }
+        };
         xhttp.open("GET","https://jsonplaceholder.typicode.com/todos",true);
         xhttp.send();
     }
-    function validate (){
-        var promise = new Promise(function(resolve,reject){
-            var checked=0;
-            var check=document.getElementById("check");
-            for(var i=0;i<check.length;i++){
-                if(check[i].checked){
-                    checked++;
-                }
-            }
-           
-        });
-    }
+    var count=0;
+    function counter()
+    {
+        count=$(".checks:checked").length;
+        const promise=new Promise((resolve,reject) =>{
+        if(count>=5)
+        {
+          resolve(" Congrats. 5 Tasks have been Successfully Completed");
+       }
+       
+    });
+       promise.then(alert).catch();
+    } 
+    
